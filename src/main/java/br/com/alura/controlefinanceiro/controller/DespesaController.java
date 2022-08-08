@@ -1,7 +1,8 @@
 package br.com.alura.controlefinanceiro.controller;
 
 import br.com.alura.controlefinanceiro.model.Despesa;
-import br.com.alura.controlefinanceiro.repository.DespesaRepository;
+import br.com.alura.controlefinanceiro.service.DespesaService;
+import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -14,16 +15,17 @@ import javax.validation.Valid;
 @RequestMapping("/despesas")
 public class DespesaController {
 
-    final DespesaRepository despesaRepository;
+    final DespesaService despesaService;
 
-    public DespesaController(DespesaRepository despesaRepository) {
-        this.despesaRepository = despesaRepository;
+    public DespesaController(DespesaService despesaService) {
+        this.despesaService = despesaService;
     }
 
+
+    @Operation(description = "Cadastro de despesas")
     @PostMapping
     public ResponseEntity<Despesa> save(@RequestBody @Valid Despesa despesa){
-        System.out.println(despesa);
-        return ResponseEntity.ok(despesaRepository.save(despesa));
+        return ResponseEntity.ok(despesaService.save(despesa));
     }
 
 }
