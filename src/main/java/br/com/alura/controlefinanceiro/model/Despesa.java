@@ -24,11 +24,12 @@ public class Despesa {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotNull @NotEmpty
+    @NotNull(message = "Descrição não pode ser nula")
+    @NotEmpty(message = "Descrição não pode ser vazia")
     private String descricao;
-    @NotNull
+    @NotNull(message = "Valor não pode ser nulo")
     private BigDecimal valor;
-    @NotNull
+    @NotNull(message = "Data não pode ser nula")
     private LocalDate data;
 
 }
