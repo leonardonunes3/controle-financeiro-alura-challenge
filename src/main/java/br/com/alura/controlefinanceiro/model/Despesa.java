@@ -39,7 +39,8 @@ public class Despesa {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Despesa despesa = (Despesa) o;
-        return Objects.equals(descricao, despesa.descricao) && Objects.equals(data, despesa.data);
+        return Objects.equals(descricao, despesa.descricao) && Objects.equals(data.getMonth(), despesa.data.getMonth())
+                && Objects.equals(data.getYear(), despesa.data.getYear());
     }
 
     @Override

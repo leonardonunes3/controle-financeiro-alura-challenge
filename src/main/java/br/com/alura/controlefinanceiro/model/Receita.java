@@ -39,7 +39,8 @@ public class Receita {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Receita receita = (Receita) o;
-        return Objects.equals(descricao, receita.descricao) && Objects.equals(data, receita.data);
+        return Objects.equals(descricao, receita.descricao) && Objects.equals(data.getMonth(), receita.data.getMonth())
+                && Objects.equals(data.getYear(), receita.data.getYear());
     }
 
     @Override
