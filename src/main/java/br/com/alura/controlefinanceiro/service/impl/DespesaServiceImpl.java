@@ -1,10 +1,8 @@
 package br.com.alura.controlefinanceiro.service.impl;
 
 import br.com.alura.controlefinanceiro.dto.DespesaDto;
-import br.com.alura.controlefinanceiro.dto.ReceitaDto;
 import br.com.alura.controlefinanceiro.exceptions.ValidacaoException;
 import br.com.alura.controlefinanceiro.model.Despesa;
-import br.com.alura.controlefinanceiro.model.Receita;
 import br.com.alura.controlefinanceiro.repository.DespesaRepository;
 import br.com.alura.controlefinanceiro.service.DespesaService;
 import org.springframework.stereotype.Service;

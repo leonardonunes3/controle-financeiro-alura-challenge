@@ -1,6 +1,5 @@
 package br.com.alura.controlefinanceiro.controller;
 
-import br.com.alura.controlefinanceiro.dto.ReceitaDto;
 import br.com.alura.controlefinanceiro.dto.ResumoDto;
 import br.com.alura.controlefinanceiro.service.ResumoService;
 import io.swagger.v3.oas.annotations.Operation;

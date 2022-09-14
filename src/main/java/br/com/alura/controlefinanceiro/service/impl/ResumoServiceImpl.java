@@ -28,9 +28,6 @@ public class ResumoServiceImpl implements ResumoService {
         List<DespesaDto> despesaDtoList = despesaService.findAllByAnoMes(ano, mes);
         ResumoDto resumoDto = new ResumoDto();
 
-        System.out.println(resumoDto.getValorDespesasCategorias().values());
-        System.out.println(resumoDto.getValorDespesasCategorias().keySet());
-
         resumoDto.setValorReceitas(receitaDtoList
                 .stream()
                 .map(ReceitaDto::getValor)
