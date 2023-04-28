@@ -10,5 +10,3 @@
 
 Link para documentação dos endpoints: 
 <a href="http://localhost:8080/swagger-ui/index.html" target="_blank">Swagger UI </a>
-
-Teste de commit
